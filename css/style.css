@@ -487,22 +487,23 @@ h1, h2, h3 {
   font-weight: 400;
   margin-left: 8px;
 }
+
 .order-btn {
-  display: inline-block;
-  padding: 14px 40px;
-  border: 3px solid rgb(46, 125, 91);
-  border-radius: 999px;
-  background: transparent;
-  color: rgb(46, 125, 91);
-  font-family: Georgia, serif;
-  font-size: 20px;
-  font-weight: bold;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
   text-decoration: none;
-  transition: all 0.2s;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .order-btn:hover {
-  background: rgb(46, 125, 91);
+  background-color: #003312;
   color: white;
 }
 
