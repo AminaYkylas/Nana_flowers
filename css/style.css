@@ -359,12 +359,12 @@ h1, h2, h3 {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 24px;
 }
 
 .service {
-  background: #FFFFFF;
+  background: rgb(255, 246, 242);
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(46, 125, 91, 0.06);
@@ -385,8 +385,8 @@ h1, h2, h3 {
 
 .heading {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 32px;
+  font-size: 36px;
+  margin: 40px;
   color: #2E7D5B;
 }
 
@@ -397,7 +397,8 @@ h1, h2, h3 {
 }
 
 .box {
-  background: #FFFFFF;
+  background: white;
+  border: 1px solid rgb(230, 230, 230);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
