@@ -441,8 +441,13 @@ h1, h2, h3 {
 }
 
 .icons {
-  background: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
 }
+
 .content {
   padding: 16px;
   text-align: center;
