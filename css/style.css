@@ -447,7 +447,18 @@ h1, h2, h3 {
   right: 0;
   display: flex;
 }
-
+.icons button {
+  height: 50px;
+  font-size: 18px;
+  background: rgb(9, 82, 9);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  transition: background 0.2s;
+}
 .content {
   padding: 16px;
   text-align: center;
