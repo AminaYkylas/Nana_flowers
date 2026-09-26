@@ -487,7 +487,19 @@ h1, h2, h3 {
   font-weight: 400;
   margin-left: 8px;
 }
+.order-btn {
+  background-color: rgb(9, 82, 9);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
 
+.order-btn:hover {
+  background-color: rgb(51, 51, 51);
+}
 
 
 
