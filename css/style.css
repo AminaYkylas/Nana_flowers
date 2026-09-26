@@ -408,12 +408,13 @@ h1, h2, h3 {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: #F4A62A;
-  color: #1A1A1A;
+  background: rgba(244, 166, 42, 1);
+  color: rgb(30, 30, 30);
   padding: 4px 12px;
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 700;
+  z-index: 1;
 }
 
 .image {
