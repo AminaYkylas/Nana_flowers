@@ -490,7 +490,13 @@ h1, h2, h3 {
   margin-left: 8px;
 }
 
-
+.icons button {
+  flex: 1 !important;
+  height: 50px !important;
+  background: red !important;
+  color: white !important;
+  border: none !important;
+}
 
 
 
