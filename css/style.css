@@ -442,12 +442,21 @@ h1, h2, h3 {
   opacity: 1.0;
 }
 
+.icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
 .content {
   padding: 16px;
   text-align: center;
 }
 
 .content h3 {
+  font-size: 18px;
   margin-bottom: 8px;
 }
 
