@@ -402,8 +402,6 @@ h1, h2, h3 {
 }
 
 .box {
-  display: flex;
-  flex-direction: column;
   background: white;
   border: 1px solid rgb(230, 230, 230);
   border-radius: 12px;
