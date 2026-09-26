@@ -350,6 +350,8 @@ h1, h2, h3 {
 
 .services {
   padding: 64px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .services h2 {
@@ -381,6 +383,8 @@ h1, h2, h3 {
 
 .products {
   padding: 64px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .heading {
@@ -392,11 +396,13 @@ h1, h2, h3 {
 
 .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 24px;
 }
 
 .box {
+  display: flex;
+  flex-direction: column;
   background: white;
   border: 1px solid rgb(230, 230, 230);
   border-radius: 12px;
@@ -420,7 +426,6 @@ h1, h2, h3 {
 
 .image {
   position: relative;
-  padding-top: 20px;
   text-align: center;
   overflow: hidden;
 }
@@ -447,7 +452,7 @@ h1, h2, h3 {
 
 .price {
   font-weight: 700;
-  color: bold;
+  color: rgb(35, 34, 34);
 }
 
 .price span {
