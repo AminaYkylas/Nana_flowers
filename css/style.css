@@ -435,11 +435,6 @@ h1, h2, h3 {
   object-fit: cover;
   opacity: 0.5;
 }
-
-.box:hover .image img {
-  opacity: 1.0;
-}
-
 .btn-group {
   display: flex;
   flex-wrap: wrap;
@@ -447,7 +442,7 @@ h1, h2, h3 {
 
 .button {
   background-color: #04AA6D;
-  border: none;
+  border: 1px solid green;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -458,6 +453,10 @@ h1, h2, h3 {
 
 .btn-group .button:hover {
   background-color: dodgerblue;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none;
 }
 .content {
   padding: 16px;
@@ -481,13 +480,6 @@ h1, h2, h3 {
   margin-left: 8px;
 }
 
-.icons button {
-  flex: 1 !important;
-  height: 50px !important;
-  background: red !important;
-  color: white !important;
-  border: none !important;
-}
 
 
 
