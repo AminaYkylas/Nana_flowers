@@ -1,0 +1,188 @@
+@media (max-width: 992px) {
+    .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 20px;
+  }
+
+    .hero .content {
+    text-align: center;
+  }
+
+    .hero .actions {
+    justify-content: center;
+  }
+
+
+    .footer__columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    .navbar {
+    gap: 16px;
+  }
+
+    .benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    .storylayout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+    .storyphoto {
+    order: -1;
+  }
+
+    .valuesgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+    body {
+    padding-top: 130px;
+  }
+
+    .header {
+    height: 130px;
+  }
+
+    .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+    .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+    .hero,
+    .benefits,
+    .testimonial,
+    .services,
+    .products,
+    .about,
+    .story,
+    .values,
+    .team,
+    .go,
+    .cta,
+    .contact-page {
+    padding: 40px 16px;
+  }
+
+    .hero .content h1 {
+    font-size: 1.6rem;
+  }
+
+    .hero .flowers {
+    max-width: 100%;
+  }
+
+    .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+    .primary,
+    .secondary,
+    .btn,
+    .btn--accent {
+    width: 100%;
+    text-align: center;
+  }
+
+    .benefits__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+    .benefit-card {
+    padding: 20px;
+  }
+
+    .testimonial__quote {
+    padding: 20px;
+  }
+
+    .footer__columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+    .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+    .box-container {
+    grid-template-columns: 1fr;
+  }
+
+    .timeline {
+    padding: 20px;
+    gap: 30px;
+  }
+
+    .timelineitem {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+    .timelineyear {
+    min-width: auto;
+  }
+
+    .valuesgrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+    .valuecard {
+    padding: 20px;
+  }
+
+    .teamrow {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+    .teamcard {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+    .contact-wrapper {
+    width: 100%;
+  }
+
+    .contact-left h1 {
+    font-size: 1.6rem;
+  }
+
+    .contact-right h2 {
+    font-size: 1.4rem;
+  }
+
+    .contact-right .button input[type="submit"] {
+    width: 100%;
+  }
+}
