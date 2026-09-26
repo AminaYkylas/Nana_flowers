@@ -440,7 +440,7 @@ h1, h2, h3 {
   opacity: 1.0;
 }
 
-.icon {
+.icons {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -448,12 +448,11 @@ h1, h2, h3 {
   display: flex;
 }
 
-.icon span {
-  flex: 1;
+.icons span {
   height: 50px;
   line-height: 50px;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  width: 50%;
   background: rgb(9, 82, 9);
   color: white;
   text-align: center;
@@ -461,7 +460,15 @@ h1, h2, h3 {
   transition: background 0.2s;
 }
 
-.icon span:hover {
+.icons .cart {
+  width: 100%;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.icons span:hover {
   background: rgb(51, 51, 51);
 }
 
