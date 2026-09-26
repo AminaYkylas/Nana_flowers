@@ -457,7 +457,7 @@ h1, h2, h3 {
 }
 
 .btn-group .button:hover {
-  background-color: rgb(255, 193, 164);
+  background-color: rgb(255, 193, 2);
 }
 
 .btn-group .button:not(:last-child) {
