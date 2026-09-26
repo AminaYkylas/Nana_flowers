@@ -440,36 +440,33 @@ h1, h2, h3 {
   opacity: 1.0;
 }
 
-.icons {
-  position: absolute;
-  bottom: 0;
+.btn-group {
+  position: absolute;         
   left: 0;
   right: 0;
   display: flex;
 }
 
-.icons span {
-  height: 50px;
-  line-height: 50px;
-  font-size: 18px;
-  width: 50%;
-  background: rgb(9, 82, 9);
+.button {
+  flex: 1;
+  background-color: rgb(9, 82, 9);
+  border: none;
   color: white;
+  padding: 15px 0;
   text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
 }
 
-.icons .cart {
-  width: 100%;
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 14px;
-  font-weight: bold;
+.btn-group .button:hover {
+  background-color: rgb(51, 51, 51);
 }
 
-.icons span:hover {
-  background: rgb(51, 51, 51);
+.btn-group .button:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .content {
