@@ -185,4 +185,8 @@
     .contact-right .button input[type="submit"] {
     width: 100%;
   }
+    .header .navbar .list a {
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-size: 1rem !important;
+}
 }
