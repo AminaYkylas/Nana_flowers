@@ -915,3 +915,6 @@ h1, h2, h3 {
         grid-template-columns: 1fr;
     }
 }
+.navbar .list a {
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
