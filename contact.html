@@ -66,13 +66,12 @@
             border-bottom: 2px solid #2E7D5B;
             padding-bottom: 4px;
         }
-
         .btn-nana {
             background-color: #2E7D5B !important;
             color: #ffffff !important;
             border: none !important;
             border-radius: 999px !important;
-            padding: 12px 32px !important;
+            padding: 12px 36px !important;
             font-size: 1rem !important;
             font-weight: 500 !important;
             cursor: pointer;
@@ -97,6 +96,52 @@
         .form-control:focus {
             border-color: #2E7D5B !important;
             box-shadow: 0 0 0 0.25rem rgba(46, 125, 91, 0.15) !important;
+        }
+
+        /* Восстановление оригнального дизайна подвала (Footer) */
+        .site-footer {
+            background-color: #2E7D5B !important;
+            color: #ffffff !important;
+            padding: 48px 0 !important;
+            margin-top: 60px;
+        }
+        .footer-inner {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 40px !important;
+            max-width: 1100px;
+            width: 90%;
+            margin: 0 auto !important;
+            text-align: center !important;
+        }
+        .footer-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            margin-bottom: 16px !important;
+            color: #ffffff !important;
+        }
+        .footer-col p {
+            color: #e0e0e0 !important;
+            font-size: 0.9rem;
+            margin-bottom: 8px !important;
+        }
+        .footer-links {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 8px !important;
+        }
+        .footer-links a {
+            color: #e0e0e0 !important;
+            text-decoration: none !important;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #ffffff !important;
+            text-decoration: underline !important;
         }
     </style>
 </head>
