@@ -909,12 +909,3 @@ h1, h2, h3 {
     box-shadow: 0 6px 18px rgba(244, 166, 42, 0.45);
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 992px) {
-    .contact-page .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
-.navbar .list a {
-    font-family: Georgia, 'Times New Roman', Times, serif !important;
-}
