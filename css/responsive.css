@@ -219,3 +219,20 @@
         padding: 24px 18px;
     }
 }
+
+
+@media (max-width: 992px) {
+  .contact-form-section {
+    padding: 48px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 40px 16px;
+  }
+
+  .contact-form-section .btnaccent {
+    width: 100%;
+  }
+}
