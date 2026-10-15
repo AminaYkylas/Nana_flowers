@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nana Flowers — Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo">Nana Flowers</a>
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Catalog</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Order</a></li>
+                <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="contact-form-card p-4 shadow-sm bg-white rounded">
+                        <h2 class="text-center mb-3">Create an Account</h2>
+                        <p class="text-center text-muted subtitle">Join Nana Flowers to get special offers</p>
+                        <div class="divider mb-4"></div>
+
+                        <!-- Registration Form (Task 3) -->
+                        <form action="#" method="post" class="needs-validation" id="registrationForm" novalidate>
+                            
+                            <!-- First Name -->
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" minlength="2" required>
+                                <div class="invalid-feedback">First name must be at least 2 characters.</div>
+                            </div>
+
+                            <!-- Last Name -->
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" minlength="2" required>
+                                <div class="invalid-feedback">Last name must be at least 2 characters.</div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="regEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="regEmail" name="regEmail" placeholder="name@example.com" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+                                <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                            </div>
+
+                            <!-- Confirm Password -->
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+                                <div class="invalid-feedback" id="passwordMatchFeedback">Passwords must match.</div>
+                            </div>
+
+                            <!-- Gender (Radio Group inside fieldset & legend) -->
+                            <fieldset class="mb-3">
+                                <legend class="form-label fs-6">Gender</legend>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
+                                    <label class="form-check-label" for="genderMale">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                    <label class="form-check-label" for="genderFemale">Female</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther" value="prefer_not_to_say" checked>
+                                    <label class="form-check-label" for="genderOther">Prefer not to say</label>
+                                </div>
+                            </fieldset>
+
+                            <!-- Hobbies or Interests (Checkboxes) -->
+                            <div class="mb-3">
+                                <label class="form-label">Hobbies or Interests</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="flowers" id="hobbyFlowers" name="hobbies">
+                                    <label class="form-check-label" for="hobbyFlowers">Floristics</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="gardening" id="hobbyGardening" name="hobbies">
+                                    <label class="form-check-label" for="hobbyGardening">Gardening</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="design" id="hobbyDesign" name="hobbies">
+                                    <label class="form-check-label" for="hobbyDesign">Design</label>
+                                </div>
+                            </div>
+
+                            <!-- Country (Required select dropdown with empty default option) -->
+                            <div class="mb-4">
+                                <label for="country" class="form-label">Country</label>
+                                <select class="form-select" id="country" name="country" required>
+                                    <option selected disabled value="">Choose your country...</option>
+                                    <option value="Kazakhstan">Kazakhstan</option>
+                                    <option value="Uzbekistan">Uzbekistan</option>
+                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a valid country.</div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="d-flex gap-2">
+                                <button type="submit" class="btn btn-primary flex-grow-1">Register</button>
+                                <button type="reset" class="btn btn-outline-secondary" id="resetBtn">Reset</button>
+                            </div>
+
+                        </form>
+
+                        <!-- Success Message Container -->
+                        <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+                            Registration successful! (Sample data processed).
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer__columns">
+            <div class="footer__col">
+                <h3>Nana Flowers</h3>
+                <p>Fresh flowers delivered daily in Astana.</p>
+            </div>
+            <div class="footer__col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Catalog</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Order</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>Contact</h3>
+                <address>
+                    <p>Astana, Kazakhstan</p>
+                    <p><a href="tel:+77001234567">+7 700 123 45 67</a></p>
+                    <p><a href="mailto:Nana2007@gmail.com">Nana2007@gmail.com</a></p>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Bootstrap Validation + Custom Password Match Check (Task 3)
+        (function () {
+            'use strict'
+            const form = document.getElementById('registrationForm');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            const successMessage = document.getElementById('successMessage');
+            const resetBtn = document.getElementById('resetBtn');
+
+            form.addEventListener('submit', function (event) {
+                let isValid = true;
+
+                // Check passwords match via JS
+                if (password.value !== confirmPassword.value) {
+                    confirmPassword.setCustomValidity("Passwords don't match");
+                    isValid = false;
+                } else {
+                    confirmPassword.setCustomValidity("");
+                }
+
+                if (!form.checkValidity() || !isValid) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault(); // Prevent real submit since backend isn't required
+                    successMessage.classList.remove('d-none');
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+
+            // Clear custom error and success message on reset
+            resetBtn.addEventListener('click', function() {
+                form.classList.remove('was-validated');
+                successMessage.classList.add('d-none');
+                form.reset();
+            });
+
+            // Clear error dynamically as user types matching passwords
+            confirmPassword.addEventListener('input', function() {
+                if (password.value === confirmPassword.value) {
+                    confirmPassword.setCustomValidity('');
+                } else {
+                    confirmPassword.setCustomValidity("Passwords don't match");
+                }
+            });
+        })()
+    </script>
+</body>
+</html>
