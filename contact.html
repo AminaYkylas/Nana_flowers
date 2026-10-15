@@ -1,108 +1,133 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nana Flowers — Контакты</title>
-    <link rel="icon" type="image/png" href="images/favicon2.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Подключение Bootstrap 5 для валидации (Task 1 & Task 2) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Оригинальные стили команды -->
+    <title>Order — Nana Flowers</title>
+    
+    <!-- Стили проекта -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
+
+    <!-- Подключаем Bootstrap 5 CSS строго для подсветки ошибок (Task 2) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Принудительная изоляция стилей для точного попадания в дизайн */
+        /* Локальные улучшенные стили для contact.html без изменения main style.css */
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif !important;
-            background-color: #FFFFFF !important;
-            color: #1A1A1A !important;
+            background-color: #FFFFFF;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
-        /* Выравнивание и компактность всей страницы */
         .contact-page {
-            padding: 40px 0 60px 0 !important;
+            padding: 50px 0 80px 0;
         }
 
+        /* Выравнивание двух колонок */
         .contact-wrapper {
-            max-width: 1000px !important;
-            margin: 0 auto !important;
-            display: grid !important;
-            grid-template-columns: 1fr 1.2fr !important;
-            gap: 48px !important;
-            align-items: start !important;
-            width: 90% !important;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 40px;
+            align-items: stretch;
         }
 
-        /* Заголовки и тексты слева */
-        .contact-left h1 {
-            font-family: Georgia, serif !important;
-            font-size: 2.2rem !important;
-            color: #2E7D5B !important;
-            margin-bottom: 24px !important;
+        /* Левая карточка с контактами — делает страницу живой и не скучной */
+        .contact-info-card {
+            background: #FFF8F3;
+            padding: 36px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(46, 125, 91, 0.06);
+            border-left: 6px solid #2E7D5B;
+        }
+
+        .contact-info-card h1 {
+            color: #2E7D5B;
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-info-card .card-subtitle {
+            color: #6B6B6B;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.95rem;
+            margin-bottom: 32px;
         }
 
         .contact-item {
-            display: flex !important;
-            gap: 16px !important;
-            margin-bottom: 20px !important;
-            align-items: center !important;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding: 12px;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: transform 0.2s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
         }
 
         .contact-item i {
-            color: #2E7D5B !important;
-            font-size: 1.2rem !important;
+            font-size: 1.25rem;
+            color: #2E7D5B;
+            width: 24px;
+            text-align: center;
         }
 
         .contact-item h3 {
-            font-family: 'Poppins', sans-serif !important;
-            font-size: 0.95rem !important;
-            font-weight: 600 !important;
-            margin: 0 !important;
-            color: #1A1A1A !important;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1A1A1A;
+            margin: 0;
         }
 
         .contact-item p {
-            font-family: 'Poppins', sans-serif !important;
-            font-size: 0.9rem !important;
-            color: #6B6B6B !important;
-            margin: 0 !important;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.9rem;
+            color: #6B6B6B;
+            margin: 0;
         }
 
-        /* Секция формы справа */
-        .contact-right h2 {
-            font-family: Georgia, serif !important;
-            font-size: 1.8rem !important;
-            color: #2E7D5B !important;
-            margin-bottom: 4px !important;
+        /* Правая форма заказа */
+        .contact-form-card {
+            background: #FFFFFF;
+            padding: 36px 32px;
+            border-radius: 20px;
+            border: 1px solid #F0F0F0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
-        .contact-right .subtitle {
-            font-family: 'Poppins', sans-serif !important;
-            color: #6B6B6B !important;
-            font-size: 0.95rem !important;
-            margin-bottom: 12px !important;
+        .contact-form-card h2 {
+            color: #2E7D5B;
+            font-size: 1.8rem;
+            margin-bottom: 6px;
         }
 
-        .contact-right .divider {
-            width: 100% !important;
-            height: 2px !important;
-            background: #FADADD !important;
-            margin-bottom: 24px !important;
+        .contact-form-card .subtitle {
+            color: #6B6B6B;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
         }
 
-        /* Стилизация Лейблов и Инпутов под стиль команды */
+        .contact-form-card .divider {
+            width: 100%;
+            height: 3px;
+            background: #FADADD;
+            border-radius: 2px;
+            margin-bottom: 28px;
+        }
+
+        /* Лейблы и стили инпутов */
         .form-label {
-            font-family: 'Poppins', sans-serif !important;
+            font-family: system-ui, -apple-system, sans-serif !important;
             font-size: 0.9rem !important;
-            font-weight: 500 !important;
+            font-weight: 600 !important;
             color: #1A1A1A !important;
             margin-bottom: 6px !important;
             display: block !important;
@@ -110,225 +135,197 @@
 
         .input-box input,
         .input-box textarea {
-            width: 100% !important;
-            border: 1px solid #E0E0E0 !important;
-            border-radius: 12px !important;
-            padding: 12px 16px !important;
-            font-family: 'Poppins', sans-serif !important;
-            font-size: 0.95rem !important;
-            color: #1A1A1A !important;
-            background: #FFFFFF !important;
-            outline: none !important;
-            box-shadow: none !important;
-            transition: border-color 0.2s !important;
+            width: 100%;
+            border: 1.5px solid #E5E5E5;
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.95rem;
+            color: #1A1A1A;
+            background: #FAFAFA;
+            outline: none;
+            transition: all 0.2s;
         }
 
         .input-box input:focus,
         .input-box textarea:focus {
-            border-color: #2E7D5B !important;
+            border-color: #2E7D5B;
+            background: #FFFFFF;
+            box-shadow: 0 0 0 3px rgba(46, 125, 91, 0.1);
         }
 
-        .input-box textarea {
-            min-height: 120px !important;
-            resize: vertical !important;
+        /* Акцентная жёлтая кнопка Send в стиле сайта */
+        .btn-send-main {
+            background: #F4A62A;
+            color: #1A1A1A;
+            border: none;
+            border-radius: 999px;
+            padding: 14px 44px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s, filter 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(244, 166, 42, 0.35);
+            display: inline-block;
         }
 
-        /* Желтая акцентная кнопка Send (как кнопка Order Now) */
-        .btn-yellow-send {
-            background-color: #F4A62A !important;
-            color: #1A1A1A !important;
-            border: none !important;
-            border-radius: 999px !important;
-            padding: 12px 38px !important;
-            font-family: 'Poppins', sans-serif !important;
-            font-size: 1rem !important;
-            font-weight: 600 !important;
-            cursor: pointer !important;
-            transition: filter 0.2s, transform 0.1s !important;
-            display: inline-block !important;
+        .btn-send-main:hover {
+            filter: brightness(0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(244, 166, 42, 0.45);
         }
 
-        .btn-yellow-send:hover {
-            filter: brightness(0.92) !important;
-            color: #1A1A1A !important;
+        .btn-send-main:active {
+            transform: translateY(0);
         }
 
-        /* Исправление подвала (Footer) */
-        .site-footer {
-            background: #1F5A40 !important;
-            color: #FFFFFF !important;
-            padding: 40px 20px 30px !important;
-            margin-top: 40px !important;
-        }
-
-        .footer__columns {
-            max-width: 1000px !important;
-            margin: 0 auto !important;
-            display: grid !important;
-            grid-template-columns: repeat(3, 1fr) !important;
-            gap: 32px !important;
-            text-align: left !important;
-        }
-
-        .footer__col h3 {
-            font-family: Georgia, serif !important;
-            color: #FFFFFF !important;
-            margin-bottom: 12px !important;
-            font-size: 1.1rem !important;
-        }
-
-        .footer__col p,
-        .footer__col a {
-            font-family: 'Poppins', sans-serif !important;
-            color: #D9F0E5 !important;
-            font-size: 0.9rem !important;
-            text-decoration: none !important;
-            margin-bottom: 6px !important;
-            display: block !important;
-        }
-
-        .footer__col a:hover {
-            color: #F4A62A !important;
-        }
-
-        .footer__col ul {
-            list-style: none !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            display: grid !important;
-            gap: 6px !important;
+        /* Подвал в точности по коду главной страницы */
+        footer.site-footer {
+            background: #1F5A40;
+            color: #FFFFFF;
+            padding: 48px 20px 32px;
+            margin-top: 60px;
         }
     </style>
 </head>
 <body>
 
-<header class="header">
-    <nav class="navbar" aria-label="Main navigation">
-        <a href="index.html" class="logo">Nana Flowers</a>
-        <ul class="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Catalog</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html" class="active" aria-current="page">Order</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main class="contact-page">
-    <div class="contact-wrapper">
-        <div class="contact-left">
-            <h1>Contact</h1>
-
-            <div class="contact-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <div>
-                    <h3>Address</h3>
-                    <p>Astana, Kazakhstan</p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <div>
-                    <h3>Phone</h3>
-                    <p>+7 700 123 45 67</p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <div>
-                    <h3>Email</h3>
-                    <p>nana2007@gmail.com</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-right">
-            <h2>Send us a message</h2>
-            <p class="subtitle">Place an order</p>
-            <div class="divider"></div>
-
-            <!-- Форма с Bootstrap-валидацией -->
-            <form action="#" method="post" class="needs-validation" novalidate>
-                
-                <div class="input-box mb-3">
-                    <label for="userName" class="form-label">Your Name</label>
-                    <input type="text" id="userName" placeholder="Enter your name" minlength="2" required>
-                    <div class="invalid-feedback">Please enter at least 2 characters.</div>
-                </div>
-
-                <div class="input-box mb-3">
-                    <label for="userPhone" class="form-label">Phone Number</label>
-                    <input type="tel" id="userPhone" placeholder="Enter your number" required>
-                    <div class="invalid-feedback">Please enter a valid phone number.</div>
-                </div>
-
-                <div class="input-box mb-3">
-                    <label for="flowerName" class="form-label">Flower Name</label>
-                    <input type="text" id="flowerName" placeholder="Enter name of flower" required>
-                    <div class="invalid-feedback">Please specify the flower name.</div>
-                </div>
-
-                <div class="input-box message-box mb-3">
-                    <label for="userMessage" class="form-label">Message</label>
-                    <textarea id="userMessage" placeholder="Message" minlength="10" maxlength="500" required></textarea>
-                    <div class="invalid-feedback">Message must be between 10 and 500 characters.</div>
-                </div>
-
-                <div class="mt-3">
-                    <button type="submit" class="btn-yellow-send">Send</button>
-                </div>
-            </form>
-        </div>
-
-    </div>
-</main>
-
-<footer class="site-footer">
-    <div class="footer__columns">
-        <div class="footer__col">
-            <h3>Nana Flowers</h3>
-            <p>Fresh flowers delivered daily in Astana.</p>
-        </div>
-
-        <div class="footer__col">
-            <h3>Quick Links</h3>
-            <ul>
+    <!-- Шапка точно как у тиммейтов -->
+    <header class="header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo">Nana Flowers</a>
+            <ul class="list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Catalog</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Order</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Order</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <!-- Левая колонка: Стильная карточка с контактами -->
+                <div class="contact-info-card">
+                    <h1>Contact Us</h1>
+                    <p class="card-subtitle">We are always ready to help you pick the best bouquet!</p>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Astana, Kazakhstan</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+7 700 123 45 67</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Nana2007@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: Улучшенная форма заказа с валидацией -->
+                <div class="contact-form-card">
+                    <h2>Send us a message</h2>
+                    <p class="subtitle">Place an order or ask a question</p>
+                    <div class="divider"></div>
+
+                    <form action="#" method="post" class="needs-validation" novalidate>
+                        
+                        <!-- Task 0 & Task 1: Label + id + HTML5 Validation -->
+                        <div class="input-box mb-3">
+                            <label for="userName" class="form-label">Your Name</label>
+                            <input type="text" id="userName" name="userName" placeholder="Enter your name" minlength="2" required>
+                            <div class="invalid-feedback">Please enter at least 2 characters.</div>
+                        </div>
+
+                        <div class="input-box mb-3">
+                            <label for="userPhone" class="form-label">Phone Number</label>
+                            <input type="tel" id="userPhone" name="userPhone" placeholder="Enter your number" required>
+                            <div class="invalid-feedback">Please enter a valid phone number.</div>
+                        </div>
+
+                        <div class="input-box mb-3">
+                            <label for="flowerName" class="form-label">Flower Name</label>
+                            <input type="text" id="flowerName" name="flowerName" placeholder="Enter name of flower" required>
+                            <div class="invalid-feedback">Please specify the flower name.</div>
+                        </div>
+
+                        <div class="input-box mb-3">
+                            <label for="userMessage" class="form-label">Message</label>
+                            <textarea id="userMessage" name="userMessage" placeholder="Write your message here..." minlength="10" maxlength="500" rows="3" required></textarea>
+                            <div class="invalid-feedback">Message must be between 10 and 500 characters.</div>
+                        </div>
+
+                        <div class="mt-4">
+                            <button type="submit" class="btn-send-main">Send</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
         </div>
+    </main>
 
-        <div class="footer__col">
-            <h3>Contact</h3>
-            <p>Astana, Kazakhstan</p>
-            <p>+7 700 123 45 67</p>
-            <p>Nana2007@gmail.com</p>
+    <!-- Подвал точно как в файле index.html у тиммейтов -->
+    <footer class="site-footer">
+        <div class="footer__columns">
+            <div class="footer__col">
+                <h3>Nana Flowers</h3>
+                <p>Fresh flowers delivered daily in Astana.</p>
+            </div>
+            <div class="footer__col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Catalog</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Order</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>Contact</h3>
+                <address>
+                    <p>Astana, Kazakhstan</p>
+                    <p><a href="tel:+77001234567">+7 700 123 45 67</a></p>
+                    <p><a href="mailto:Nana2007@gmail.com">Nana2007@gmail.com</a></p>
+                </address>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- Скрипт валидации Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    (function () {
-        'use strict'
-        var forms = document.querySelectorAll('.needs-validation')
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
-    })()
-</script>
-
+    <!-- JS Bootstrap для проверки и валидации полей при нажатии (Task 2) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 </html>
