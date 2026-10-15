@@ -755,12 +755,17 @@ h1, h2, h3 {
 }
 
 
+
+
 .contact-page {
     background-color: #FFFFFF;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 50px 0 80px 0;
 }
-
+.header .navbar .list a {
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-size: 1rem !important;
+}
 .contact-page .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -768,7 +773,6 @@ h1, h2, h3 {
     align-items: stretch;
 }
 
-/* Левая карточка с контактами */
 .contact-page .contact-info-card {
     background: #FFF8F3;
     padding: 36px 30px;
@@ -828,7 +832,6 @@ h1, h2, h3 {
     margin: 0;
 }
 
-/* Правая карточка формы */
 .contact-page .contact-form-card {
     background: #FFFFFF;
     padding: 36px 32px;
