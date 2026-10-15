@@ -912,3 +912,80 @@ h1, h2, h3 {
     box-shadow: 0 6px 18px rgba(244, 166, 42, 0.45);
 }
 
+.contact-form-section {
+  padding: 64px 0;
+  background: #FFF8F3;
+}
+
+.contact-form-section h2 {
+  margin-bottom: 8px;
+  color: #2E7D5B;
+}
+
+.contact-form-section .lead {
+  margin-bottom: 32px;
+  color: #6B6B6B;
+}
+
+.contact-form-section .form-label {
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 6px;
+}
+
+.contact-form-section .form-control {
+  border: 2px solid #EEEEEE;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.contact-form-section .form-control:focus {
+  border-color: #2E7D5B;
+  box-shadow: 0 0 0 3px rgba(46, 125, 91, 0.15);
+}
+
+.contact-form-section .form-text {
+  color: #6B6B6B;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.contact-form-section .btnaccent {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 12px 28px;
+  margin-top: 8px;
+}
+
+.success-message {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: #D4F4DD;
+  color: #1F5A40;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact-form-section .valid-feedback {
+  color: #2E7D5B;
+}
+
+.contact-form-section .invalid-feedback {
+  color: #C2185B;
+}
+
+.contact-form-section .form-control.is-valid,
+.contact-form-section .was-validated .form-control:valid {
+  border-color: #2E7D5B;
+}
+
+.contact-form-section .form-control.is-invalid,
+.contact-form-section .was-validated .form-control:invalid {
+  border-color: #C2185B;
+}
