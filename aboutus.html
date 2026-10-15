@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -145,6 +146,71 @@
             </div>
             </div>
         </section>
+
+<section class="contact-form-section">
+    <div class="container">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Contact Us</h2>
+        <p class="lead">Have a question or want to order a bouquet? Write to us.</p>
+
+        <form class="needs-validation" novalidate id="contactForm">
+          <div class="row">
+              <div class="col-md-6 mb-3">
+                 <label for="contactName" class="form-label">Name</label>
+                 <input
+                    type="text"
+                    class="form-control"
+                    id="contactName"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                    minlength="2">
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please enter at least 2 characters.</div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="contactEmail" class="form-label">Email</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <label for="contactMessage" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="contactMessage"
+            name="message"
+            rows="5"
+            placeholder="Your message (10-500 characters)"
+            required
+            minlength="10"
+            maxlength="500"></textarea>
+          <div class="form-text">Between 10 and 500 characters.</div>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Message must be 10-500 characters.</div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btnaccent">Send Message</button>
+        </div>
+
+      </div>
+    </form>
+
+    <div id="successMessage" class="success-message" style="display: none;">
+       Thank you! Your message has been sent.
+    </div>
+
+  </div>
+</section>
 
     </main>
 
