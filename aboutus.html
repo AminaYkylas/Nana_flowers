@@ -178,25 +178,25 @@
                     name="email"
                     placeholder="you@example.com"
                     required>
-          <div class="valid-feedback">Looks good!</div>
-          <div class="invalid-feedback">Please enter a valid email address.</div>
-        </div>
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
 
-        <div class="col-12 mb-3">
-          <label for="contactMessage" class="form-label">Message</label>
-          <textarea
-            class="form-control"
-            id="contactMessage"
-            name="message"
-            rows="5"
-            placeholder="Your message (10-500 characters)"
-            required
-            minlength="10"
-            maxlength="500"></textarea>
-          <div class="form-text">Between 10 and 500 characters.</div>
-          <div class="valid-feedback">Looks good!</div>
-          <div class="invalid-feedback">Message must be 10-500 characters.</div>
-        </div>
+            <div class="col-12 mb-3">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="contactMessage"
+                name="message"
+                rows="5"
+                placeholder="Your message (10-500 characters)"
+                required
+                minlength="10"
+                maxlength="500"></textarea>
+                <div class="form-text">Between 10 and 500 characters.</div>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Message must be 10-500 characters.</div>
+            </div>
 
         <div class="col-12">
           <button type="submit" class="btnaccent">Send Message</button>
@@ -223,6 +223,27 @@
        
 
     </footer>
+
+
+    <script>
+          const forms = document.querySelectorAll('.needs-validation');
+
+          forms.forEach(form => {
+          form.addEventListener('submit', event => {
+          event.preventDefault();
+          event.stopPropagation();
+
+          if (form.checkValidity()) {
+            document.getElementById('successMessage').style.display = 'block';
+            form.reset();
+            form.classList.remove('was-validated');
+          } else {
+            form.classList.add('was-validated');
+            document.getElementById('successMessage').style.display = 'none';
+          }
+        });
+      });
+    </script>
 
 </body>
 </html>
