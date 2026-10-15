@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Nana</title>
-    <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
+    <title>Nana Flowers — Контакты</title>
+    <link rel="icon" type="image/png" href="images/favicon2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<header class="header">
+<header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
         <a href="index.html" class="logo">Nana Flowers</a>
-        <ul class="list">
+        <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Catalog</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html" class="active" aria-current="page">Order</a></li>
         </ul>
     </nav>
@@ -29,7 +36,7 @@
             <h1>Contact</h1>
 
             <div class="contact-item">
-                <span>&#127978;</span>
+                <i class="fa-solid fa-location-dot"></i>
                 <div>
                     <h3>Address</h3>
                     <p>Astana, Kazakhstan</p>
@@ -37,7 +44,7 @@
             </div>
 
             <div class="contact-item">
-                <span>&#128222;</span>
+                <i class="fa-solid fa-phone"></i>
                 <div>
                     <h3>Phone</h3>
                     <p>+7 700 123 45 67</p>
@@ -45,42 +52,60 @@
             </div>
 
             <div class="contact-item">
-                <span>&#x1F4C4;</span>
+                <i class="fa-solid fa-envelope"></i>
                 <div>
                     <h3>Email</h3>
                     <p>nana2007@gmail.com</p>
                 </div>
             </div>
         </div>
+
         <div class="contact-right">
             <h2>Send us a message</h2>
             <p class="subtitle">Place an order</p>
             <div class="divider"></div>
 
-            <form action="#" method="post">
-                <div class="input-box">
-                    <input type="text" placeholder="Enter your name" required>
+            <form action="#" method="post" class="needs-validation" novalidate>
+                
+                <div class="input-box mb-3">
+                    <label for="userName" class="form-label">Your Name</label>
+                    <input type="text" id="userName" class="form-control" placeholder="Enter your name" minlength="2" required>
+                    <div class="invalid-feedback">Please enter at least 2 characters.</div>
+                    <div class="valid-feedback">Looks good!</div>
                 </div>
-                <div class="input-box">
-                    <input type="tel" placeholder="Enter your number" required>
+
+                <div class="input-box mb-3">
+                    <label for="userPhone" class="form-label">Phone Number</label>
+                    <input type="tel" id="userPhone" class="form-control" placeholder="Enter your number" required>
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                    <div class="valid-feedback">Looks good!</div>
                 </div>
-                <div class="input-box">
-                    <input type="text" placeholder="Enter name of flower">
+
+                <div class="input-box mb-3">
+                    <label for="flowerName" class="form-label">Flower Name</label>
+                    <input type="text" id="flowerName" class="form-control" placeholder="Enter name of flower" required>
+                    <div class="invalid-feedback">Please specify the flower name.</div>
+                    <div class="valid-feedback">Great choice!</div>
                 </div>
-                <div class="input-box message-box">
-                    <textarea placeholder="Message"></textarea>
+
+                <div class="input-box message-box mb-3">
+                    <label for="userMessage" class="form-label">Message</label>
+                    <textarea id="userMessage" class="form-control" placeholder="Message" minlength="10" maxlength="500" required></textarea>
+                    <div class="invalid-feedback">Message must be between 10 and 500 characters.</div>
+                    <div class="valid-feedback">Perfect!</div>
                 </div>
+
                 <div class="button">
-                    <input type="submit" value="Send">
+                    <button type="submit" class="btn btn-success w-100 py-2">Send</button>
                 </div>
             </form>
         </div>
 
     </div>
 </main>
-<footer class="go">
-    <div class="footer-inner">
 
+<footer class="site-footer">
+    <div class="footer-inner">
         <div class="footer-col">
             <h3>Nana Flowers</h3>
             <p>Fresh flowers delivered daily in Astana.</p>
@@ -91,7 +116,7 @@
             <ul class="footer-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Catalog</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Order</a></li>
             </ul>
         </div>
@@ -102,9 +127,26 @@
             <p>+7 700 123 45 67</p>
             <p>Nana2007@gmail.com</p>
         </div>
-
     </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
 
 </body>
 </html>
