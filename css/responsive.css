@@ -240,3 +240,27 @@
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+    .header {
+        position: relative;
+        height: auto;
+    }
+
+    .header .navbar {
+        min-height: 0;
+    }
+
+    .header .navbar .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px 20px;
+        width: 100%;
+    }
+
+    .services {
+        margin-top: 0;
+    }
+}
