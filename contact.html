@@ -64,14 +64,15 @@
                     <p class="subtitle">Place an order or ask a question</p>
                     <div class="divider"></div>
 
-                    <div class="task-0-box mb-4 p-3 border rounded bg-light">
-                        <h3 class="h5 text-primary mb-3">Task 0: Personalized Greeting</h3>
+                    <div class="mb-4 p-4 border rounded-3 bg-white shadow-sm" style="border-color: #f1f1f1 !important;">
+                        <h4 class="h6 fw-bold mb-1 text-dark">Welcome to Nana Flowers</h4>
+                        <p class="text-muted small mb-3">Enter your name for a personal greeting from our team.</p>
                         <div class="mb-2">
-                            <label for="task0NameInput" class="form-label">Your Name</label>
-                            <input type="text" id="task0NameInput" class="form-control" placeholder="Enter your name...">
+                            <label for="task0NameInput" class="form-label small fw-semibold">Your Name</label>
+                            <input type="text" id="task0NameInput" class="form-control form-control-sm" placeholder="Enter your name...">
                         </div>
-                        <button type="button" id="task0Btn" class="btn btn-secondary btn-sm">Show Greeting</button>
-                        <div id="task0Result" class="mt-2 fw-bold"></div>
+                        <button type="button" id="task0Btn" class="btn btn-dark btn-sm px-3 mt-1">Get Greeting</button>
+                        <div id="task0Result" class="mt-2 small fw-bold"></div>
                     </div>
 
                     <form action="#" method="post" class="needs-validation" novalidate>
@@ -163,10 +164,10 @@
 
                 if (trimmedValue === '') {
                     resultElement.textContent = 'Please enter a valid name (field cannot be empty or spaces)!';
-                    resultElement.className = 'mt-2 fw-bold text-danger';
+                    resultElement.className = 'mt-2 small fw-bold text-danger';
                 } else {
                     resultElement.textContent = `Welcome, ${trimmedValue}! Thank you for visiting Nana Flowers.`;
-                    resultElement.className = 'mt-2 fw-bold text-success';
+                    resultElement.className = 'mt-2 small fw-bold text-success';
                 }
             });
         });
