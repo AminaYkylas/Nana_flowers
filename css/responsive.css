@@ -264,3 +264,12 @@
         margin-top: 0;
     }
 }
+@media (max-width: 600px) {
+  .favourites {
+    margin: 40px 15px;
+    padding: 25px 15px;
+  }
+  .flower-form-row {
+    flex-direction: column;
+  }
+}
