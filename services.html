@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
   <link rel="stylesheet" href="css/responsive.css">
+  <script src="services.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -49,7 +50,12 @@
     </section>
   <section class="products" id="products">
     <h1 class="heading">Hot <span>Products</span></h1>
-
+    <div class="bouquet-search">
+      <label for="searchBouquet">Find your perfect bouquet</label>
+      <input type="text" id="searchBouquet" placeholder="Search bouquets...">
+      <p id="resultCount">9 bouquets found</p>
+      <p id="noResults" hidden>No results found</p>
+    </div>
     <div class="box-container">
 
       <div class="box">
@@ -57,7 +63,7 @@
         <div class="image">
           <img src="images/bouquet1.jpg" alt="Bouquet 1">
            <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -72,7 +78,7 @@
         <div class="image">
           <img src="images/bouquet2.jpg" alt="Bouquet 2">
           <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -87,7 +93,7 @@
         <div class="image">
           <img src="images/bouquet3.jpg" alt="Bouquet 3">
           <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -102,7 +108,7 @@
         <div class="image">
           <img src="images/bouquet4.jpg" alt="Bouquet 4">
           <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -117,7 +123,7 @@
         <div class="image">
           <img src="images/bouquet5.jpg" alt="Bouquet 5">
           <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -132,7 +138,7 @@
         <div class="image">
           <img src="images/bouquet6.jpg" alt="Bouquet 6">
           <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -147,7 +153,7 @@
         <div class="image">
           <img src="images/bouquet7.jpg" alt="Bouquet 7">
           <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -162,7 +168,7 @@
         <div class="image">
           <img src="images/bouquet8.jpg" alt="Bouquet 8">
           <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -177,7 +183,7 @@
         <div class="image">
           <img src="images/bouquet9.jpg" alt="Bouquet 9">
           <div class="btn-group">
-            <button class="button">&#127892;</button>
+            <button type="button" class="button favorite-btn">>&#127892;</button>
             <button class="button">Add to Cart</button>
           </div>
         </div>
@@ -187,6 +193,19 @@
         </div>
       </div>
     </div>    
+  </section>
+  <section class="favourites">
+    <h2>My Favourite Flowers&#127892;</h2>
+    <p class="favourites-description">Create your own little flower wishlist!</p>
+    <form id="flowerForm">
+      <label for="flowerInput">Flower name</label>
+      <div class="flower-form-row">
+        <input type="text" id="flowerInput" placeholder="e.g. Pink Lily">
+        <button type="submit">Add Flower</button>
+      </div>
+    </form>
+    <p id="flowerCount">0 flowers added</p>
+    <ul id="flowerList"></ul>
   </section>
 </body>
 </html>
