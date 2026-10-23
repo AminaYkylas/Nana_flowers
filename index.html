@@ -6,8 +6,8 @@
   <title>Home Nana</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
-  <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
-  <script src="index.js" defer></script>
+  <link rel="icon" type="image/png" href="faviconjpg.jpg">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -30,7 +30,7 @@
   <main>
     <section class="hero">
       <div class="hero__text">
-        <img src="images/kotikk.png" class="kotik" alt="cat with flowers">
+        <img src="kotikk.png" class="kotik" alt="cat with flowers">
         <h1>Flowers gathered with love, especially for you</h1>
         <p>The best bouquets in all of Astana</p>
         <div class="actions">
@@ -38,7 +38,7 @@
           <a href="contact.html" class="secondary">Order Now</a>
         </div>
       </div>
-      <img src="images/flowers.jpg" class="flowers" alt="Nana Bouquet" loading="lazy">
+      <img src="flowers.jpg" class="flowers" alt="Nana Bouquet" loading="lazy">
     </section>
 
     <section class="benefits" aria-labelledby="benefits-title">
@@ -77,23 +77,6 @@
       <h2 id="cta-title">More in our Catalog</h2>
       <p>Order today and get free delivery on your first purchase.</p>
       <a href="contact.html" class="btn btn--accent btn--large">Order Now</a>
-    </section>
-
-    
-    <section class="favourites" aria-labelledby="fav-title">
-      <h2 id="fav-title">My Favourite Flowers</h2>
-      <p>Add flowers you love. You can remove them any time.</p>
-
-      <form id="favForm" class="fav-form">
-        <label for="favInput">Flower name</label>
-        <input type="text" id="favInput" placeholder="e.g. Red Rose" autocomplete="off">
-        <button type="submit" class="btn btnaccent">Add</button>
-      </form>
-
-      <p id="favMessage" class="fav-message" role="status"></p>
-      <p id="favCount" class="fav-count">Favourites: 0</p>
-
-      <ul id="favList" class="fav-list"></ul>
     </section>
   </main>
 
