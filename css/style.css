@@ -379,7 +379,7 @@ h1, h2, h3 {
 .service-large {
   grid-column: 1 / 2;  
   grid-row: 1 / 3;
-  background: rgb(250, 201, 228);
+  background: rgb(255, 228, 235);
   }
 
 .products {
