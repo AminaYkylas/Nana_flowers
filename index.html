@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -19,6 +20,10 @@
         <li><a href="contact.html">Order</a></li>
         <li><a href="register.html">Register</a></li>
       </ul>
+      
+      <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">
+         Dark mode
+      </button>
     </nav>
   </header>
 
@@ -72,6 +77,23 @@
       <h2 id="cta-title">More in our Catalog</h2>
       <p>Order today and get free delivery on your first purchase.</p>
       <a href="contact.html" class="btn btn--accent btn--large">Order Now</a>
+    </section>
+
+    
+    <section class="favourites" aria-labelledby="fav-title">
+      <h2 id="fav-title">My Favourite Flowers</h2>
+      <p>Add flowers you love. You can remove them any time.</p>
+
+      <form id="favForm" class="fav-form">
+        <label for="favInput">Flower name</label>
+        <input type="text" id="favInput" placeholder="e.g. Red Rose" autocomplete="off">
+        <button type="submit" class="btn btnaccent">Add</button>
+      </form>
+
+      <p id="favMessage" class="fav-message" role="status"></p>
+      <p id="favCount" class="fav-count">Favourites: 0</p>
+
+      <ul id="favList" class="fav-list"></ul>
     </section>
   </main>
 
