@@ -147,6 +147,30 @@
             </div>
         </section>
 
+<section class="container my-5">
+  <h2>FAQ</h2>
+  
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How to order flowers?</button>
+      <p class="faq-answer hidden">You can call us or use the contact form on this page!</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do you have same-day delivery?</button>
+      <p class="faq-answer hidden">Yes, if you order before 2 PM, we will deliver today in Astana.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Are the flowers fresh?</button>
+      <p class="faq-answer hidden">We receive fresh flowers every morning. Guaranteed!</p>
+    </div>
+  </div>
+</section>        
+
+
+        
+
 <section class="contact-form-section">
     <div class="container">
         <p class="eyebrow">Get in touch</p>
@@ -244,6 +268,21 @@
         });
       });
     </script>
+<script>
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(function(question) {
+  question.addEventListener("click", function() {
+    const answer = question.nextElementSibling;
+    
+    answer.classList.toggle("hidden");
+
+    const isHidden = answer.classList.contains("hidden");
+    question.setAttribute("aria-expanded", !isHidden);
+  });
+});
+</script>
+    
 
 </body>
 </html>
