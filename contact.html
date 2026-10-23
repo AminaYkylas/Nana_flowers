@@ -17,6 +17,7 @@
             <a href="index.html" class="logo">Nana Flowers</a>
             <ul class="list">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Catalog</a></li>
                 <li><a href="services.html">Catalogue</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="contact.html" class="active" aria-current="page">Order</a></li>
@@ -28,7 +29,7 @@
     <main class="contact-page">
         <div class="container">
             <div class="contact-wrapper">
-                
+
                 <div class="contact-info-card">
                     <h1>Contact</h1>
                     <p class="card-subtitle">We are always ready to help you pick the best bouquet!</p>
@@ -63,8 +64,18 @@
                     <p class="subtitle">Place an order or ask a question</p>
                     <div class="divider"></div>
 
+                    <div class="task-0-box mb-4 p-3 border rounded bg-light">
+                        <h3 class="h5 text-primary mb-3">Task 0: Personalized Greeting</h3>
+                        <div class="mb-2">
+                            <label for="task0NameInput" class="form-label">Your Name</label>
+                            <input type="text" id="task0NameInput" class="form-control" placeholder="Enter your name...">
+                        </div>
+                        <button type="button" id="task0Btn" class="btn btn-secondary btn-sm">Show Greeting</button>
+                        <div id="task0Result" class="mt-2 fw-bold"></div>
+                    </div>
+
                     <form action="#" method="post" class="needs-validation" novalidate>
-                        
+
                         <div class="input-box mb-3">
                             <label for="userName" class="form-label">Your Name</label>
                             <input type="text" id="userName" name="userName" placeholder="Enter your name" minlength="2" required>
@@ -140,7 +151,25 @@
                     form.classList.add('was-validated')
                 }, false)
             })
-        })()
+        })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const nameInput = document.getElementById('task0NameInput');
+            const greetButton = document.querySelector('#task0Btn');
+            const resultElement = document.getElementById('task0Result');
+
+            greetButton.addEventListener('click', () => {
+                const trimmedValue = nameInput.value.trim();
+
+                if (trimmedValue === '') {
+                    resultElement.textContent = 'Please enter a valid name (field cannot be empty or spaces)!';
+                    resultElement.className = 'mt-2 fw-bold text-danger';
+                } else {
+                    resultElement.textContent = `Welcome, ${trimmedValue}! Thank you for visiting Nana Flowers.`;
+                    resultElement.className = 'mt-2 fw-bold text-success';
+                }
+            });
+        });
     </script>
 </body>
 </html>
