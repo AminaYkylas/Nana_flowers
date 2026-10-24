@@ -7,8 +7,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
   <link rel="icon" type="image/png" href="faviconjpg.jpg">
-  <script src="index.js" defer></script>
 </head>
+   <script>
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      const body = document.body;
+      themeToggle.addEventListener('click', () => {
+        const isDark = body.classList.toggle('dark-theme');
+        if (isDark) {
+          themeToggle.textContent = 'Light mode';
+          themeToggle.setAttribute('aria-pressed', 'true');
+        } else {
+          themeToggle.textContent = 'Dark mode';
+          themeToggle.setAttribute('aria-pressed', 'false');
+        }
+      });
+    }
+  </script>
 <body>
   <header class="header">
     <nav class="navbar" aria-label="Main navigation">
