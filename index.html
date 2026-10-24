@@ -6,24 +6,10 @@
   <title>Home Nana</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <script src="index.js" defer></script>
   <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
 </head>
-   <script>
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      const body = document.body;
-      themeToggle.addEventListener('click', () => {
-        const isDark = body.classList.toggle('dark-theme');
-        if (isDark) {
-          themeToggle.textContent = 'Light mode';
-          themeToggle.setAttribute('aria-pressed', 'true');
-        } else {
-          themeToggle.textContent = 'Dark mode';
-          themeToggle.setAttribute('aria-pressed', 'false');
-        }
-      });
-    }
-  </script>
+   
 <body>
   <header class="header">
     <nav class="navbar" aria-label="Main navigation">
