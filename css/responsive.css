@@ -273,3 +273,26 @@
     flex-direction: column;
   }
 }
+
+
+@media (max-width: 768px) {
+  .faq-question {
+    font-size: 16px;
+    padding: 12px;
+  }
+  
+  .faq-answer {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+
+  #contactForm button[type="submit"] {
+    width: 100%;
+  }
+  
+
+  .contact-form-section {
+    padding: 30px 15px;
+  }
+}
