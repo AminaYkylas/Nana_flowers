@@ -147,79 +147,58 @@
             </div>
         </section>
 
-<section class="container my-5">
+<section class="container my-5" id="faq-section">
   <h2>FAQ</h2>
   
   <div class="faq-list">
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">How to order flowers?</button>
-      <p class="faq-answer hidden">You can call us or use the contact form on this page!</p>
+      <div class="faq-answer" style="display: none;">
+        <p>You can call us or use the contact form on this page!</p>
+      </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">Do you have same-day delivery?</button>
-      <p class="faq-answer hidden">Yes, if you order before 2 PM, we will deliver today in Astana.</p>
+      <div class="faq-answer" style="display: none;">
+        <p>Yes, if you order before 2 PM, we will deliver today in Astana.</p>
+      </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">Are the flowers fresh?</button>
-      <p class="faq-answer hidden">We receive fresh flowers every morning. Guaranteed!</p>
+      <div class="faq-answer" style="display: none;">
+        <p>We receive fresh flowers every morning. Guaranteed!</p>
+      </div>
     </div>
   </div>
 </section>        
 
 
-        
-
-<section class="contact-form-section">
+<section class="contact-form-section" id="contact-form-section">
     <div class="container">
         <p class="eyebrow">Get in touch</p>
-        <h2>Contact Us</h2>
+        <h2>Contact Us (Demo)</h2>
         <p class="lead">Have a question or want to order a bouquet? Write to us.</p>
 
-        <form class="needs-validation" novalidate id="contactForm">
+        <form novalidate id="contactForm">
           <div class="row">
               <div class="col-md-6 mb-3">
                  <label for="contactName" class="form-label">Name</label>
-                 <input
-                    type="text"
-                    class="form-control"
-                    id="contactName"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                    minlength="2">
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Please enter at least 2 characters.</div>
+                 <input type="text" class="form-control" id="contactName" name="name" placeholder="Your name">
+                 <span class="error-text" id="nameError" style="color: red; font-size: 14px; display: none;">Name is required (min 2 chars).</span>
               </div>
 
               <div class="col-md-6 mb-3">
                 <label for="contactEmail" class="form-label">Email</label>
-                <input
-                    type="email"
-                    class="form-control"
-                    id="contactEmail"
-                    name="email"
-                    placeholder="you@example.com"
-                    required>
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                <input type="email" class="form-control" id="contactEmail" name="email" placeholder="you@example.com">
+                <span class="error-text" id="emailError" style="color: red; font-size: 14px; display: none;">Please enter a valid email address.</span>
             </div>
 
             <div class="col-12 mb-3">
               <label for="contactMessage" class="form-label">Message</label>
-              <textarea
-                class="form-control"
-                id="contactMessage"
-                name="message"
-                rows="5"
-                placeholder="Your message (10-500 characters)"
-                required
-                minlength="10"
-                maxlength="500"></textarea>
-                <div class="form-text">Between 10 and 500 characters.</div>
-                <div class="valid-feedback">Looks good!</div>
-                <div class="invalid-feedback">Message must be 10-500 characters.</div>
+              <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Your message (min 10 characters)"></textarea>
+              <span class="error-text" id="messageError" style="color: red; font-size: 14px; display: none;">Message must be at least 10 characters.</span>
             </div>
 
         <div class="col-12">
@@ -229,12 +208,13 @@
       </div>
     </form>
 
-    <div id="successMessage" class="success-message" style="display: none;">
-       Thank you! Your message has been sent.
+    <div id="successMessage" class="success-message" style="display: none; background: #D4F4DD; padding: 15px; border-radius: 8px; color: #1F5A40; margin-top: 20px;">
+       Thank you! Your message has been sent (Frontend demonstration).
     </div>
 
   </div>
-</section>
+</section>        
+
 
     </main>
 
@@ -249,39 +229,67 @@
     </footer>
 
 
-    <script>
-          const forms = document.querySelectorAll('.needs-validation');
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-          forms.forEach(form => {
-          form.addEventListener('submit', event => {
-          event.preventDefault();
-          event.stopPropagation();
-
-          if (form.checkValidity()) {
-            document.getElementById('successMessage').style.display = 'block';
-            form.reset();
-            form.classList.remove('was-validated');
-          } else {
-            form.classList.add('was-validated');
-            document.getElementById('successMessage').style.display = 'none';
-          }
-        });
-      });
-    </script>
 <script>
-const faqQuestions = document.querySelectorAll(".faq-question");
+  $(document).ready(function() {
 
-faqQuestions.forEach(function(question) {
-  question.addEventListener("click", function() {
-    const answer = question.nextElementSibling;
-    
-    answer.classList.toggle("hidden");
 
-    const isHidden = answer.classList.contains("hidden");
-    question.setAttribute("aria-expanded", !isHidden);
+    $('.faq-question').on('click', function() {
+      const $answer = $(this).next('.faq-answer');
+      
+
+      $answer.slideToggle(300);
+      
+      const isExpanded = $(this).attr('aria-expanded') === 'true';
+      $(this).attr('aria-expanded', !isExpanded);
+    });
+
+
+    $('#contactForm').on('submit', function(event) {
+      event.preventDefault(); 
+      
+      let isValid = true;
+      
+
+      const nameVal = $('#contactName').val().trim();
+      const emailVal = $('#contactEmail').val().trim();
+      const msgVal = $('#contactMessage').val().trim();
+      
+
+      if (nameVal.length < 2) {
+        $('#nameError').fadeIn(200);
+        isValid = false;
+      } else {
+        $('#nameError').fadeOut(200);
+      }
+
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailVal === "" || !emailPattern.test(emailVal)) {
+        $('#emailError').fadeIn(200);
+        isValid = false;
+      } else {
+        $('#emailError').fadeOut(200);
+      }
+
+      if (msgVal.length < 10) {
+        $('#messageError').fadeIn(200);
+        isValid = false;
+      } else {
+        $('#messageError').fadeOut(200);
+      }
+
+      if (isValid) {
+        $('#successMessage').fadeIn(500);
+        $('#contactForm')[0].reset();
+      } else {
+        $('#successMessage').fadeOut(200);
+      }
+    });
+
   });
-});
-</script>
+</script>  
     
 
 </body>
