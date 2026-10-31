@@ -27,7 +27,7 @@
             <div class="container">
                 <p class="eyebrow">About our lovely studio</p>
                 <h1>We make bouquets that adorn your life</h1>
-                <p class="lead">Our studio is a charismatic workshop in Astana ioy. Since 2017 we have been making custom and creative bouquets from fresh local and imported flowers.
+                <p class="lead">Our studio is a charismatic workshop in Astana. Since 2017 we have been making custom and creative bouquets from fresh local and imported flowers.
                     We know how difficult it is to find an unusual and cool bouquet, so we are trying and improving for you!</p>
             </div>
         </section>
@@ -58,7 +58,7 @@
                     <li class="timelineitem">
                         <span class="timelineyear">2024</span>
                         <h3>67,000 bouquets</h3>
-                        <p>We reached a record number of orders in one year(67)</p>
+                        <p>We reached a record number of orders in one year</p>
                     </li>
                 </ol>
 
@@ -231,65 +231,7 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
-  $(document).ready(function() {
-
-
-    $('.faq-question').on('click', function() {
-      const $answer = $(this).next('.faq-answer');
-      
-
-      $answer.slideToggle(300);
-      
-      const isExpanded = $(this).attr('aria-expanded') === 'true';
-      $(this).attr('aria-expanded', !isExpanded);
-    });
-
-
-    $('#contactForm').on('submit', function(event) {
-      event.preventDefault(); 
-      
-      let isValid = true;
-      
-
-      const nameVal = $('#contactName').val().trim();
-      const emailVal = $('#contactEmail').val().trim();
-      const msgVal = $('#contactMessage').val().trim();
-      
-
-      if (nameVal.length < 2) {
-        $('#nameError').fadeIn(200);
-        isValid = false;
-      } else {
-        $('#nameError').fadeOut(200);
-      }
-
-
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (emailVal === "" || !emailPattern.test(emailVal)) {
-        $('#emailError').fadeIn(200);
-        isValid = false;
-      } else {
-        $('#emailError').fadeOut(200);
-      }
-
-      if (msgVal.length < 10) {
-        $('#messageError').fadeIn(200);
-        isValid = false;
-      } else {
-        $('#messageError').fadeOut(200);
-      }
-
-      if (isValid) {
-        $('#successMessage').fadeIn(500);
-        $('#contactForm')[0].reset();
-      } else {
-        $('#successMessage').fadeOut(200);
-      }
-    });
-
-  });
-</script>  
+<script src="about.js"></script>
     
 
 </body>
