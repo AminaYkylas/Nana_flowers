@@ -3,6 +3,8 @@ $(document).ready(function() {
     
     let answer = $(this).next('.faq-answer');
     let isExpanded = $(this).attr('aria-expanded');
+    answer.slideToggle(300);
+    
     if (isExpanded === 'true') {
       $(this).attr('aria-expanded', 'false');
     } else {
