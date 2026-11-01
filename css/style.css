@@ -1296,3 +1296,116 @@ body.dark-theme .testimonial__quote {
     margin-left: auto;
   }
 }
+
+/* ===== Task 1: welcome block ===== */
+.welcome-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0 8px;
+}
+
+.welcome-form .welcome-label {
+  width: 100%;
+  font-weight: 600;
+  color: #2E7D5B;
+  margin-bottom: 4px;
+}
+
+.welcome-form input {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 12px 16px;
+  border: 2px solid #FADADD;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 1rem;
+  background: #FFFFFF;
+  color: #1A1A1A;
+  transition: border-color 0.2s;
+}
+
+.welcome-form input:focus {
+  outline: none;
+  border-color: #2E7D5B;
+  box-shadow: 0 0 0 3px rgba(46, 125, 91, 0.15);
+}
+
+.welcome-form input.input-error {
+  border-color: #C2185B;
+}
+
+.welcome-form .primary,
+.welcome-form .secondary {
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+}
+
+.welcome-message {
+  font-weight: 600;
+  color: #2E7D5B;
+  min-height: 1.4em;
+  margin-top: 8px;
+}
+
+.welcome-error {
+  color: #C2185B;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+
+body.dark-theme .welcome-form input {
+  background: #1E1E1E;
+  color: #F1F1F1;
+  border-color: #333;
+}
+body.dark-theme .welcome-form input:focus {
+  border-color: #7ED9A8;
+  box-shadow: 0 0 0 3px rgba(126, 217, 168, 0.2);
+}
+body.dark-theme .welcome-message { color: #7ED9A8; }
+body.dark-theme .welcome-form .welcome-label { color: #7ED9A8; }
+body.dark-theme .welcome-form .secondary {
+  background: transparent;
+  color: #7ED9A8;
+  border: 2px solid #7ED9A8;
+}
+
+
+#flowerList li span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#flowerList .remove-btn {
+  flex-shrink: 0;
+  background-color: #C2185B;
+}
+#flowerList .remove-btn:hover {
+  background-color: #9d2345;
+}
+
+body.dark-theme .favourites {
+  background-color: #1E1E1E;
+  color: #F1F1F1;
+}
+body.dark-theme .favourites h2,
+body.dark-theme .favourites label { color: #7ED9A8; }
+body.dark-theme #flowerList li {
+  background-color: #2A2A2A;
+  color: #F1F1F1;
+}
+body.dark-theme #emptyFavourites { color: #BBB; }
+
+
+@media (max-width: 640px) {
+  .welcome-form { flex-direction: column; align-items: stretch; }
+  .welcome-form .primary,
+  .welcome-form .secondary { width: 100%; }
+}
