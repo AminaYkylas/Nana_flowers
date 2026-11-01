@@ -6,6 +6,7 @@
   <title>Home Nana</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="index.js" defer></script>
   <link rel="icon" type="image/png" href="images/faviconjpg.jpg">
 </head>
@@ -35,6 +36,14 @@
         <img src="images/kotikk.png" class="kotik" alt="cat with flowers">
         <h1>Flowers gathered with love, especially for you</h1>
         <p>The best bouquets in all of Astana</p>
+        <form id="welcomeForm" class="welcome-form" novalidate>
+  <label for="userName" class="welcome-label">Your name</label>
+  <input type="text" id="userName" placeholder="e.g. Aliya" autocomplete="name">
+  <button type="submit" class="primary">Greet me</button>
+  <button type="button" id="clearWelcome" class="secondary">Clear</button>
+</form>
+<p id="welcomeMessage" class="welcome-message" role="status" aria-live="polite"></p>
+<p id="welcomeError" class="welcome-error" role="alert"></p>
         <div class="actions">
           <a href="services.html" class="primary">Catalog</a>
           <a href="contact.html" class="secondary">Order Now</a>
@@ -74,7 +83,24 @@
         <p class="testimonial__author">— Alina S., Astana</p>
       </aside>
     </section>
+    
+   <section class="favourites" aria-labelledby="favourites-title">
+  <h2 id="favourites-title">My Favourites</h2>
+  <p class="favourites-description">Add bouquets you love — we'll remember them.</p>
 
+  <form id="favForm" novalidate>
+    <label for="favInput">Bouquet name</label>
+    <div class="flower-form-row">
+      <input type="text" id="favInput" placeholder="e.g. Pink Peony Bouquet" autocomplete="off">
+      <button type="submit">Add</button>
+    </div>
+  </form>
+
+  <p id="flowerError" role="alert"></p>
+  <p id="flowerCount">In favourites: <span id="favCount">0</span></p>
+  <ul id="flowerList"></ul>
+  <p id="emptyFavourites">Your favourites list is empty. Add something!</p>
+</section>
     <section class="cta" aria-labelledby="cta-title">
       <h2 id="cta-title">More in our Catalog</h2>
       <p>Order today and get free delivery on your first purchase.</p>
