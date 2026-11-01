@@ -73,7 +73,6 @@
                         <button type="button" id="task0Btn" class="btn btn-dark btn-sm px-3 mt-1">Get Greeting</button>
                         <div id="task0Result" class="mt-2 small fw-bold"></div>
                     </div>
-
                     <form action="#" method="post" class="needs-validation" novalidate>
 
                         <div class="input-box mb-3">
@@ -136,40 +135,9 @@
             </div>
         </div>
     </footer>
-
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        (function () {
-            'use strict'
-            var forms = document.querySelectorAll('.needs-validation')
-            Array.prototype.slice.call(forms).forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    event.preventDefault()
-                    if (!form.checkValidity()) {
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })();
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const nameInput = document.getElementById('task0NameInput');
-            const greetButton = document.querySelector('#task0Btn');
-            const resultElement = document.getElementById('task0Result');
-
-            greetButton.addEventListener('click', () => {
-                const trimmedValue = nameInput.value.trim();
-
-                if (trimmedValue === '') {
-                    resultElement.textContent = 'Please enter a valid name (field cannot be empty or spaces)!';
-                    resultElement.className = 'mt-2 small fw-bold text-danger';
-                } else {
-                    resultElement.textContent = `Welcome, ${trimmedValue}! Thank you for visiting Nana Flowers.`;
-                    resultElement.className = 'mt-2 small fw-bold text-success';
-                }
-            });
-        });
-    </script>
+    <script src="contact.js" defer></script>
 </body>
 </html>
