@@ -548,11 +548,6 @@ h1, h2, h3 {
   outline: none;
   box-sizing: border-box;
 }
-
-.bouquet-search input:focus {
-  border-color: rgb(46, 128, 91);
-}
-
 #resultCount {
   margin-top: 15px;
   color: rgb(119, 119, 119);
@@ -640,6 +635,49 @@ h1, h2, h3 {
   background-color: white;
   border-radius: 10px;
   text-align: left;
+}
+#bouquetCategory {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border: 2px solid rgb(244, 196, 217);
+    border-radius: 12px;
+    background: white;
+    color: rgb(26, 26, 26);
+    font: inherit;
+}
+
+.bouquet-search label[for="bouquetCategory"] {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#flowerError {
+    color: rgb(157, 35, 69);
+    margin-top: 12px;
+}
+
+#emptyFavourites {
+    color: rgb(85, 85, 85);
+    margin-top: 15px;
+}
+
+#flowerList li span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#flowerList .remove-btn {
+    flex-shrink: 0;
+}
+
+.products button:focus-visible,
+.products select:focus-visible,
+.products input:focus-visible,
+.favourites button:focus-visible,
+.favourites input:focus-visible {
+    outline: 3px solid rgb(46, 125, 91);
+    outline-offset: 3px;
 }
 
 
