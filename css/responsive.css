@@ -42,9 +42,12 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Исправление контейнера карточек контактов */
+    .contact-page .contact-wrapper,
     .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        width: 100% !important;
     }
 
     .contact-form-section {
@@ -190,21 +193,25 @@
         padding: 20px;
     }
 
-    /* ДОБАВЛЕННЫЙ И ИСПРАВЛЕННЫЙ БЛОК ДЛЯ СТРАНИЦЫ КОНТАКТОВ НА МОБИЛКАХ */
+    /* СТРОГОЕ ВЫРАВНИВАНИЕ В ОДНУ КОЛОНКУ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+    main.contact-page .contact-wrapper,
     .contact-page .contact-wrapper,
     .contact-wrapper {
-        display: flex !important;
-        flex-direction: column !important;
+        display: grid !important;
+        grid-template-columns: 100% !important;
         width: 100% !important;
         max-width: 100% !important;
-        gap: 20px !important;
-        padding: 0 !important;
-        margin: 0 !important;
+        gap: 24px !important;
+        padding: 0 8px !important;
+        box-sizing: border-box !important;
     }
 
     .contact-page .contact-info-card,
-    .contact-page .contact-form-card {
+    .contact-page .contact-form-card,
+    .contact-info-card,
+    .contact-form-card {
         width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
         padding: 24px 18px !important;
     }
@@ -222,11 +229,6 @@
     .contact-form-section .btnaccent,
     .contact-page .btn-send-main {
         width: 100% !important;
-    }
-
-    main.contact-page .contact-info-card,
-    main.contact-page .contact-form-card {
-        padding: 24px 18px;
     }
 
     .faq-question {
