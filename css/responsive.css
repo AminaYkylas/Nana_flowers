@@ -255,3 +255,29 @@
         flex-direction: column;
     }
 }
+@media (max-width: 768px) {
+    .contact-page .contact-wrapper,
+    .contact-wrapper {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .contact-page .contact-info-card,
+    .contact-page .contact-form-card,
+    .contact-info-card,
+    .contact-form-card {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 24px !important;
+        box-sizing: border-box !important;
+        padding: 20px 16px !important;
+    }
+
+    .contact-page .btn-send-main {
+        width: 100% !important;
+    }
+}
