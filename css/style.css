@@ -18,7 +18,6 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 
 
 
-
 .header {
   position: fixed; top: 0; left: 0; width: 100%; height: 72px;
   background: #FFFFFF; border-bottom: 1px solid #EEEEEE; z-index: 1000;
@@ -30,15 +29,31 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
   height: 100%; width: min(1100px, 90%); margin: 0 auto;
 }
 
-.logo { font-size: 1.25rem; color: #2E7D5B; text-decoration: none; font-weight: bold; }
+.logo { 
+  font-family: Georgia, 'Times New Roman', serif !important; 
+  font-size: 1.25rem; 
+  color: #2E7D5B; 
+  text-decoration: none; 
+  font-weight: bold; 
+}
+
 .list { display: flex; gap: 32px; list-style: none; }
 
 .list a {
-  color: #1A1A1A; text-decoration: none; font-weight: 500;
-  padding-bottom: 4px; border-bottom: 2px solid transparent; transition: 0.2s;
+  font-family: Georgia, 'Times New Roman', serif !important; 
+  font-size: 1.1rem !important; 
+  color: #1A1A1A; 
+  text-decoration: none; 
+  font-weight: 500;
+  padding-bottom: 4px; 
+  border-bottom: 2px solid transparent; 
+  transition: 0.2s;
 }
 
-.list a:hover, .list a.active { color: #2E7D5B; border-bottom-color: #2E7D5B; }
+.list a:hover, .list a.active { 
+  color: #2E7D5B; 
+  border-bottom-color: #2E7D5B; 
+}
 
 
 .theme-toggle {
