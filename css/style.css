@@ -78,6 +78,150 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
   color: #FFFFFF; 
 }
 
+.btn--accent {
+  background: #E88AA0;
+  color: #FFFFFF;
+  transition: 0.2s; 
+  border-radius: 999px;
+  text-decoration: none; 
+  font-weight: bold; 
+  display: inline-block;
+  border: none; 
+  padding: 12px 28px; 
+  cursor: pointer;
+}
+
+.btn--accent:hover {
+  filter: brightness(0.9);
+}
+
+.btn--large {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+}
+
+
+.hero { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 40px; 
+  flex-wrap: wrap; 
+}
+
+.hero__text { 
+  flex: 1 1 400px; 
+}
+
+.hero .kotik { 
+  width: 120px; 
+  margin-bottom: 15px; 
+  display: block;
+}
+
+.hero img { 
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px; 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1); 
+}
+
+.hero .actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.testimonial {
+  background-color: #FFF8F3;
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonial h2 {
+  margin-bottom: 30px;
+}
+.testimonial__quote {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-left: 6px solid #2E7D5B; 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  text-align: left;
+}
+.testimonial__quote blockquote p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.testimonial__author {
+  color: #666;
+  font-weight: bold;
+}
+
+.favourites {
+  padding: 60px 20px;
+  background-color: #FFFFFF;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.favourites h2 {
+  margin-bottom: 10px;
+}
+.favourites-description {
+  color: #666;
+  margin-bottom: 20px;
+}
+#favForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.flower-form-row {
+  display: flex;
+  gap: 10px;
+}
+.flower-form-row input {
+  flex: 1;
+  margin-bottom: 0; 
+}
+.flower-form-row button {
+  background: #E88AA0; 
+  color: #FFF;
+  border: none;
+  border-radius: 12px;
+  padding: 0 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.flower-form-row button:hover {
+  filter: brightness(0.9);
+}
+#flowerList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFF8F3;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #FADADD;
+}
+#flowerList .remove-btn {
+  background: #2E7D5B;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
 
 .about, .hero { background: #FADADD; padding: 64px 0; }
 .story { background: #FFFFFF; padding: 64px 0; }
