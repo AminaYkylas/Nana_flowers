@@ -154,13 +154,48 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 .footer__col a:hover { color: #F4A62A; }
 
 
-body.dark-theme { background: #121212 !important; color: #F1F1F1 !important; }
-body.dark-theme .header { background: #1E1E1E !important; border-bottom-color: #333 !important; }
-body.dark-theme .logo { color: #7ED9A8 !important; }
-body.dark-theme .list a { color: #F1F1F1 !important; }
-body.dark-theme .list a:hover, body.dark-theme .list a.active { color: #7ED9A8 !important; border-bottom-color: #7ED9A8 !important; }
-body.dark-theme .theme-toggle { color: #7ED9A8 !important; border-color: #7ED9A8 !important; }
-body.dark-theme .footer__col a:hover { color: #E88AA0 !important; }
+
+
+
+body.dark-theme { 
+    background-color: #121212 !important; 
+    color: #F1F1F1 !important; 
+}
+
+body.dark-theme .header { 
+    background-color: #1E1E1E !important; 
+    border-bottom-color: #333 !important; 
+}
+body.dark-theme .logo { 
+    color: #7ED9A8 !important; 
+}
+body.dark-theme .list a { 
+    color: #F1F1F1 !important; 
+}
+body.dark-theme .list a:hover, 
+body.dark-theme .list a.active { 
+    color: #7ED9A8 !important; 
+    border-bottom-color: #7ED9A8 !important; 
+}
+body.dark-theme .theme-toggle { 
+    color: #7ED9A8 !important; 
+    border-color: #7ED9A8 !important; 
+}
+
+body.dark-theme .about,
+body.dark-theme .hero,
+body.dark-theme .story,
+body.dark-theme .values,
+body.dark-theme .team,
+body.dark-theme .benefits,
+body.dark-theme .testimonial,
+body.dark-theme .contact-form-section,
+body.dark-theme .contact-page,
+body.dark-theme .services,
+body.dark-theme .products,
+body.dark-theme .favourites { 
+    background-color: #181818 !important; 
+}
 
 body.dark-theme .valuecard, 
 body.dark-theme .teamcard,
@@ -168,38 +203,28 @@ body.dark-theme .benefit-card,
 body.dark-theme .service,
 body.dark-theme .box,
 body.dark-theme .faq-answer,
-body.dark-theme .favourites,
 body.dark-theme .contact-form-card,
-body.dark-theme .contact-info-card {
-  background: #1E1E1E !important;
-  color: #F1F1F1 !important;
-  border-color: #333 !important;
+body.dark-theme .contact-info-card { 
+    background-color: #1E1E1E !important; 
+    border-color: #333 !important; 
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5) !important;
 }
 
 body.dark-theme h1, 
 body.dark-theme h2, 
 body.dark-theme h3, 
 body.dark-theme .eyebrow,
-body.dark-theme .price { color: #7ED9A8 !important; }
+body.dark-theme .price,
+body.dark-theme .timelineyear { 
+    color: #7ED9A8 !important; 
+}
 
 body.dark-theme p, 
-body.dark-theme span, 
+body.dark-theme span:not(.valueicon), 
 body.dark-theme label, 
-body.dark-theme .lead { color: #D1D1D1 !important; }
-
-body.dark-theme .values, 
-body.dark-theme .contact-form-section,
-body.dark-theme .about,
-body.dark-theme .story,
-body.dark-theme .hero,
-body.dark-theme .team,
-body.dark-theme .contact-page,
-body.dark-theme .testimonial,
-body.dark-theme .favourites,
-body.dark-theme .services,
-body.dark-theme .products,
-body.dark-theme .benefits { 
-  background: #181818 !important; 
+body.dark-theme .lead,
+body.dark-theme .card-subtitle { 
+    color: #D1D1D1 !important; 
 }
 
 body.dark-theme .form-control, 
@@ -208,5 +233,20 @@ body.dark-theme .input-box textarea,
 body.dark-theme .bouquet-search input, 
 body.dark-theme .bouquet-search select,
 body.dark-theme .welcome-form input, 
-body.dark-theme .flower-form-row input,
-body.dark-theme .faq-answer { background: #1E1E1E !important; color: #F1F1F1 !important; }
+body.dark-theme .flower-form-row input { 
+    background-color: #2A2A2A !important; 
+    color: #FFFFFF !important; 
+    border-color: #444 !important; 
+}
+
+body.dark-theme .faq-question { 
+    background-color: #2A2A2A !important; 
+    color: #FFFFFF !important; 
+    border: 1px solid #444 !important;
+}
+
+body.dark-theme .btnaccent, 
+body.dark-theme .primary { 
+    background-color: #E88AA0 !important; 
+    color: #121212 !important; 
+}
