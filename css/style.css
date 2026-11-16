@@ -192,11 +192,15 @@ body.dark-theme .contact-form-section,
 body.dark-theme .about,
 body.dark-theme .story,
 body.dark-theme .hero,
+body.dark-theme .team,
+body.dark-theme .contact-page,
 body.dark-theme .testimonial,
 body.dark-theme .favourites,
 body.dark-theme .services,
 body.dark-theme .products,
-body.dark-theme .benefits { background: #181818 !important; }
+body.dark-theme .benefits { 
+  background: #181818 !important; 
+}
 
 body.dark-theme .form-control, 
 body.dark-theme .input-box input, 
