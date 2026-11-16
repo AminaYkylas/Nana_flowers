@@ -250,3 +250,8 @@ body.dark-theme .primary {
     background-color: #E88AA0 !important; 
     color: #121212 !important; 
 }
+body.dark-theme .go, 
+body.dark-theme .cta,
+body.dark-theme .site-footer { 
+    background-color: #0F291E !important;
+}
