@@ -47,23 +47,40 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 }
 .theme-toggle:hover { background: #2E7D5B; color: #FFF; }
 
+
 .btnaccent, .primary {
-  background: #F4A62A;
-  color: #1A1A1A; transition: 0.2s; border-radius: 999px;
-  text-decoration: none; font-weight: bold; display: inline-block;
-  border: none; padding: 10px 22px; cursor: pointer;
+  background: #E88AA0; 
+  color: #FFFFFF;
+  transition: 0.2s; 
+  border-radius: 999px;
+  text-decoration: none; 
+  font-weight: bold; 
+  display: inline-block;
+  border: none; 
+  padding: 10px 22px; 
+  cursor: pointer;
 }
-.btnaccent:hover, .primary:hover { filter: brightness(0.9); }
+.btnaccent:hover, .primary:hover { 
+  filter: brightness(0.9); 
+}
 
 .secondary {
-  background: transparent; color: #2E7D5B; border: 2px solid #2E7D5B;
-  border-radius: 999px; text-decoration: none; font-weight: bold; padding: 8px 20px;
+  background: transparent; 
+  color: #2E7D5B; 
+  border: 2px solid #2E7D5B;
+  border-radius: 999px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  padding: 8px 20px;
 }
-.secondary:hover { background: #2E7D5B; color: #FFFFFF; }
+.secondary:hover { 
+  background: #2E7D5B; 
+  color: #FFFFFF; 
+}
 
 
-
-.about, .hero, .story { background: #FADADD; padding: 64px 0; }
+.about, .hero { background: #FADADD; padding: 64px 0; }
+.story { background: #FFFFFF; padding: 64px 0; }
 .values, .benefits, .team, .contact-form-section, .contact-page, .services, .products, .testimonial { background: #FFFFFF; padding: 64px 0; }
 .go, .cta { background: #2E7D5B; color: #FFFFFF; padding: 64px 0; text-align: center; }
 .go h2, .cta h2 { color: #FFFFFF; margin-bottom: 8px; }
@@ -90,9 +107,18 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 .timelineitem h3 { color: #2E7D5B; margin-bottom: 4px; }
 .storyphoto img { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 
-.faq-question { display: block; width: 100%; text-align: left; padding: 15px; background: #FADADD; color: #1A1A1A; border: none; border-radius: 8px; margin-top: 10px; cursor: pointer; font-weight: bold; font-size: 18px; }
+.faq-question { 
+  display: block; width: 100%; text-align: left; padding: 15px; 
+  background: #FADADD; color: #1A1A1A; border: none; border-radius: 8px; 
+  margin-top: 10px; cursor: pointer; font-weight: bold; font-size: 18px; 
+}
 .faq-question:hover { background: #f7c6c9; }
-.faq-answer { padding: 15px; background: #FFF8F3; border-left: 4px solid #2E7D5B; margin-top: 5px; border-radius: 0 0 8px 8px; color: #1A1A1A; }
+.faq-answer { 
+  padding: 15px; 
+  background: #FFFFFF; 
+  border-left: 4px solid #2E7D5B; 
+  margin-top: 5px; border-radius: 0 0 8px 8px; color: #1A1A1A; 
+}
 
 
 
@@ -134,6 +160,7 @@ body.dark-theme .logo { color: #7ED9A8 !important; }
 body.dark-theme .list a { color: #F1F1F1 !important; }
 body.dark-theme .list a:hover, body.dark-theme .list a.active { color: #7ED9A8 !important; border-bottom-color: #7ED9A8 !important; }
 body.dark-theme .theme-toggle { color: #7ED9A8 !important; border-color: #7ED9A8 !important; }
+body.dark-theme .footer__col a:hover { color: #E88AA0 !important; }
 
 body.dark-theme .valuecard, 
 body.dark-theme .teamcard,
@@ -178,4 +205,4 @@ body.dark-theme .bouquet-search input,
 body.dark-theme .bouquet-search select,
 body.dark-theme .welcome-form input, 
 body.dark-theme .flower-form-row input,
-body.dark-theme .faq-question { background: #2A2A2A !important; color: #FFF !important; border-color: #444 !important; }
+body.dark-theme .faq-answer { background: #1E1E1E !important; color: #F1F1F1 !important; }
