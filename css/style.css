@@ -580,3 +580,10 @@ section.products .box-container {
     gap: 30px !important;
     margin-top: 30px;
 }
+body.dark-theme .discount,
+body.dark-theme span.discount,
+body.dark-theme .box .discount {
+    background-color: #FADADD !important;
+    color: #1A1A1A !important;
+    text-decoration: none !important;
+}
