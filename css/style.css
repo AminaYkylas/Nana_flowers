@@ -424,10 +424,10 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 }
 
 .contact-info-card {
-  background: #FFF8F3;
+  background: #FFFFFF;
   padding: 36px 30px;
   border-radius: 20px;
-  border-left: 6px solid #2E7D5B; 
+  border-left: 2px solid #FADADD; 
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
