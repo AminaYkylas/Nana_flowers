@@ -462,10 +462,6 @@ body.dark-theme #flowerList .remove-btn {
     color: #121212 !important;
 }
 
-body.dark-theme .discount {
-    background-color: #FADADD !important;
-    color: #1A1A1A !important;
-}
 body.dark-theme .order-btn {
     background-color: #E88AA0 !important;
     color: #121212 !important;
@@ -570,4 +566,15 @@ body.dark-theme .go,
 body.dark-theme .cta,
 body.dark-theme .site-footer { 
     background-color: #0F291E !important;
+}
+body.dark-theme .box .discount,
+body.dark-theme span.discount {
+    background-color: #FADADD !important; 
+    color: #1A1A1A !important;          
+    font-weight: bold !important;
+}
+
+body.dark-theme .price span {
+    color: #A0A0A0 !important; 
+    text-decoration: line-through !important;
 }
