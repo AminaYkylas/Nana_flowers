@@ -396,9 +396,6 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 .service-large { grid-column: 1 / 2; grid-row: 1 / 3; background: #FADADD; }
 
 .box-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-.products .box-container {
-  grid-template-columns: repeat(3, 1fr);
-}
 .box { background: white; border: 1px solid #EEE; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 .image img { width: 100%; height: 220px; object-fit: cover; }
 
@@ -575,14 +572,9 @@ body.dark-theme .cta,
 body.dark-theme .site-footer { 
     background-color: #0F291E !important;
 }
-body.dark-theme .box .discount,
-body.dark-theme span.discount {
-    background-color: #FADADD !important; 
-    color: #1A1A1A !important;          
-    font-weight: bold !important;
-}
 
-body.dark-theme .price span {
-    color: #A0A0A0 !important; 
-    text-decoration: line-through !important;
+section.products .box-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
 }
