@@ -139,7 +139,7 @@ $(document).ready(function () {
         localStorage.setItem('nanaCart', JSON.stringify(cart));
         updateCartCounter();
         const originalText = $(this).text();
-        $(this).text('Added! ✓').css('background-color', '#2E7D5B').css('color', '#FFF');
+        $(this).text('Added!').css('background-color', '#2E7D5B').css('color', '#FFF');
     
         setTimeout(() => {
             $(this).text(originalText).css('background-color', '').css('color', '');
