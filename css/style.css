@@ -773,4 +773,7 @@ body.dark-theme .box .discount {
     text-decoration: none !important;
 }
 
+body.dark-theme .error-text {
+    color: #FF6B6B !important; 
+}
 
