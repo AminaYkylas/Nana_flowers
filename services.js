@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    const savedSearch = localStorage.getItem('lastSearch');
+    const savedCategory = localStorage.getItem('lastCategory');
+    if (savedSearch) $("#searchBouquet").val(savedSearch);
+    if (savedCategory) $("#bouquetCategory").val(savedCategory);
     const bouquets = $(".products .box");
     function filterBouquets() {
         const searchText = $("#searchBouquet")
@@ -36,6 +40,10 @@ $(document).ready(function () {
         $("#resultCount").text(count + " bouquets found");
 
         $("#noResults").prop("hidden", count !== 0);
+        
+        localStorage.setItem('lastSearch', searchText);
+        
+        localStorage.setItem('lastCategory', category);
     }
 
     $("#searchBouquet").on("input", filterBouquets);
@@ -123,8 +131,28 @@ $(document).ready(function () {
     });
 
     updateCount();
-
+    let cart = JSON.parse(localStorage.getItem('nanaCart')) || [];
+    updateCartCounter();
+    $('.btn-group .button').not('.favorite-btn').on('click', function() {
+        const bouquetName = $(this).closest('.box').find('h3').text();
+        cart.push(bouquetName);
+        localStorage.setItem('nanaCart', JSON.stringify(cart));
+        updateCartCounter();
+        const originalText = $(this).text();
+        $(this).text('Added! ✓').css('background-color', '#2E7D5B').css('color', '#FFF');
+    
+        setTimeout(() => {
+            $(this).text(originalText).css('background-color', '').css('color', '');
+        }, 1500);
 });
+
+
+    function updateCartCounter() {
+        const count = cart.length;
+        $('#cartCounter').text(`🛒 Cart (${count})`);
+    }
+});
+
 
 function applyTheme(theme) {
     if (theme === 'dark') {
