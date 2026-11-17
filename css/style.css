@@ -735,40 +735,5 @@ body.dark-theme .box .discount {
     color: #1A1A1A !important;
     text-decoration: none !important;
 }
-.contact-wrapper { 
-    display: grid; 
-    grid-template-columns: 1fr 1.5fr; 
-    gap: 40px; 
-    margin-top: 20px; 
-}
-.contact-info-card, .contact-form-card { 
-    background: #FFF8F3; 
-    padding: 30px; 
-    border-radius: 16px; 
-    border: 1px solid #FADADD; 
-}
-.contact-form-card {
-    background: #FFFFFF;
-}
-body.dark-theme .contact-info-card,
-body.dark-theme .contact-form-card {
-    background-color: #1E1E1E !important;
-    border-color: #333 !important;
-}
 
-body.dark-theme .contact-form-card .bg-white {
-    background-color: #2A2A2A !important;
-    border-color: #444 !important;
-}
-body.dark-theme .contact-form-card .bg-white h4,
-body.dark-theme .contact-form-card .bg-white p {
-    color: #F1F1F1 !important;
-}
-
-body.dark-theme .btn-send-main,
-body.dark-theme .contact-form-card .btn-dark {
-    background-color: #7ED9A8 !important;
-    color: #121212 !important;
-    border-color: #7ED9A8 !important;
-}
 
