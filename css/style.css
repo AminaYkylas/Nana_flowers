@@ -427,7 +427,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 }
 
 .contact-info-card {
-    background: #FFF8F3;
+    background: white;
     padding: 30px;
     border-radius: 16px;
     border: 1px solid #FADADD;
@@ -559,14 +559,12 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
   cursor: pointer;
 }
 
-/* ===== ТЕМНАЯ ТЕМА ДЛЯ КОНТАКТОВ ===== */
 body.dark-theme .contact-info-card,
 body.dark-theme .contact-form-card {
     background-color: #1E1E1E !important;
     border-color: #333 !important;
 }
 
-/* Исправляем белый фон внутри формы (Task 1) для темной темы */
 body.dark-theme .contact-form-card .bg-white {
     background-color: #2A2A2A !important;
     border-color: #444 !important;
@@ -594,7 +592,10 @@ body.dark-theme .btn-send-main {
     background-color: #7ED9A8 !important;
     color: #121212 !important;
 }
-
+body.dark-theme .contact-item h3,
+body.dark-theme .contact-item p {
+    color: #1A1A1A !important; 
+}
 
 
 
