@@ -941,3 +941,10 @@ body.dark-theme textarea,
 body.dark-theme select {
     color: #FFFFFF !important;
 }
+body.dark-theme .form-control::placeholder {
+    color: #B0B0B0 !important;
+}
+
+body.dark-theme .form-control {
+    color: #FFFFFF !important;
+}
