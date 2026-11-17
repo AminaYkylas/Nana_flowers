@@ -149,7 +149,7 @@ $(document).ready(function () {
 
     function updateCartCounter() {
         const count = cart.length;
-        $('#cartCounter').text(`🛒 Cart (${count})`);
+        $('#cartCounter').text(`Cart (${count})`);
     }
 });
 
