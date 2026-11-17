@@ -462,6 +462,11 @@ body.dark-theme #flowerList .remove-btn {
     color: #121212 !important;
 }
 
+body.dark-theme .discount {
+    color: #121212 !important; 
+    font-weight: bold;         
+}
+
 body.dark-theme .order-btn {
     background-color: #E88AA0 !important;
     color: #121212 !important;
