@@ -396,6 +396,9 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 .service-large { grid-column: 1 / 2; grid-row: 1 / 3; background: #FADADD; }
 
 .box-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.products .box-container {
+  grid-template-columns: repeat(3, 1fr);
+}
 .box { background: white; border: 1px solid #EEE; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 .image img { width: 100%; height: 220px; object-fit: cover; }
 
