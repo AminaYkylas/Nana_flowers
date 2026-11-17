@@ -931,3 +931,13 @@ body.dark-theme .custom-check .form-check-input:checked {
         gap: 10px;
     }
 }
+body.dark-theme .form-control::placeholder {
+    color: #9A9A9A !important;
+    opacity: 1;
+}
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    color: #FFFFFF !important;
+}
