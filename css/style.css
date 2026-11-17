@@ -576,5 +576,6 @@ body.dark-theme .site-footer {
 section.products .box-container {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
+    gap: 30px !important;
+    margin-top: 30px;
 }
