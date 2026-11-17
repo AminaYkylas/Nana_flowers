@@ -125,3 +125,21 @@ $(document).ready(function () {
     updateCount();
 
 });
+
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        $('body').addClass('dark-theme');
+        $('#themeToggle').text('Light mode').attr('aria-pressed', 'true');
+    } else {
+        $('body').removeClass('dark-theme');
+        $('#themeToggle').text('Dark mode').attr('aria-pressed', 'false');
+    }
+}
+applyTheme(localStorage.getItem('theme') || 'light');
+
+$('#themeToggle').on('click', function () {
+    const isDark = $('body').hasClass('dark-theme');
+    const newTheme = isDark ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+});
