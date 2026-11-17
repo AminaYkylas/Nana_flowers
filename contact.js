@@ -73,22 +73,3 @@ $(document).ready(function() {
     });
 
 });
-$(document).ready(function() {
-    function applyTheme(theme) {
-        if (theme === 'dark') {
-            $('body').addClass('dark-theme');
-            $('#themeToggle').text('Light mode');
-        } else {
-            $('body').removeClass('dark-theme');
-            $('#themeToggle').text('Dark mode');
-        }
-    }
-    applyTheme(localStorage.getItem('theme') || 'light');
-
-    $('#themeToggle').on('click', function () {
-        const isDark = $('body').hasClass('dark-theme');
-        const newTheme = isDark ? 'light' : 'dark';
-        localStorage.setItem('theme', newTheme);
-        applyTheme(newTheme);
-    });
-});
