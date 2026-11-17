@@ -412,23 +412,25 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 .bouquet-search input, .bouquet-search select, .welcome-form input, .flower-form-row input { width: 100%; padding: 12px; border: 2px solid #FADADD; border-radius: 12px; margin-bottom: 10px; }
 
 
-
+.contact-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 20px;
+}
 
 
 .contact-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 40px;
-  align-items: start;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-top: 20px;
 }
 
 .contact-info-card {
-  background: #FFFFFF;
-  padding: 36px 30px;
-  border-radius: 20px;
-  border-left: 2px solid #FADADD; 
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    background: #FFF8F3;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #FADADD;
 }
 
 .contact-info-card h1 {
@@ -472,11 +474,11 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 }
 
 .contact-form-card {
-  background: #FFFFFF;
-  padding: 36px 32px;
-  border-radius: 20px;
-  border: 1px solid #EEEEEE;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #FADADD;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
 .contact-form-card h2 {
@@ -557,7 +559,41 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
   cursor: pointer;
 }
 
+/* ===== ТЕМНАЯ ТЕМА ДЛЯ КОНТАКТОВ ===== */
+body.dark-theme .contact-info-card,
+body.dark-theme .contact-form-card {
+    background-color: #1E1E1E !important;
+    border-color: #333 !important;
+}
 
+/* Исправляем белый фон внутри формы (Task 1) для темной темы */
+body.dark-theme .contact-form-card .bg-white {
+    background-color: #2A2A2A !important;
+    border-color: #444 !important;
+}
+body.dark-theme .contact-form-card .bg-white h4,
+body.dark-theme .contact-form-card .bg-white p {
+    color: #F1F1F1 !important;
+}
+.btn-send-main {
+    background-color: #2E7D5B;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-send-main:hover {
+    filter: brightness(0.9);
+}
+
+body.dark-theme .btn-send-main {
+    background-color: #7ED9A8 !important;
+    color: #121212 !important;
+}
 
 
 
