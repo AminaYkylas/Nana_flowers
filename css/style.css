@@ -931,20 +931,28 @@ body.dark-theme .custom-check .form-check-input:checked {
         gap: 10px;
     }
 }
-body.dark-theme .form-control::placeholder {
-    color: #9A9A9A !important;
-    opacity: 1;
+body.dark-theme .form-control,
+body.dark-theme .input-box input {
+    background-color: #2A2A2A !important;
+    color: #FFFFFF !important;
+    border-color: #444 !important;
 }
 
-body.dark-theme input,
-body.dark-theme textarea,
-body.dark-theme select {
-    color: #FFFFFF !important;
-}
-body.dark-theme .form-control::placeholder {
-    color: #B0B0B0 !important;
+body.dark-theme .form-control::placeholder,
+body.dark-theme .input-box input::placeholder {
+    color: #A0A0A0 !important;
 }
 
-body.dark-theme .form-control {
-    color: #FFFFFF !important;
+body.dark-theme .form-check-input {
+    background-color: #2A2A2A !important;
+    border: 2px solid #555 !important;
+}
+
+body.dark-theme .form-check-input:checked {
+    background-color: #7ED9A8 !important;
+    border-color: #7ED9A8 !important;
+}
+
+body.dark-theme .custom-check {
+    align-items: center;
 }
