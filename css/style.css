@@ -421,7 +421,55 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', Times, serif; line-height:
 .footer__col a, .footer__col p { color: #D9F0E5; text-decoration: none; }
 .footer__col a:hover { color: #F4A62A; }
 
+body.dark-theme .bouquet-search label,
+body.dark-theme .bouquet-search p,
+body.dark-theme #resultCount,
+body.dark-theme #noResults,
+body.dark-theme #flowerCount,
+body.dark-theme #emptyFavourites,
+body.dark-theme .favourites-description {
+    color: #D1D1D1 !important;
+}
 
+body.dark-theme .bouquet-search input::placeholder,
+body.dark-theme #flowerInput::placeholder {
+    color: #9A9A9A !important;
+}
+
+body.dark-theme .btn-group .button {
+    background-color: #2E2E2E !important;
+    color: #F1F1F1 !important;
+}
+body.dark-theme .btn-group .button:hover {
+    background-color: #E88AA0 !important;
+    color: #121212 !important;
+}
+body.dark-theme #flowerForm label,
+body.dark-theme #flowerForm button {
+    color: #F1F1F1;
+}
+body.dark-theme .flower-form-row button {
+    background-color: #E88AA0 !important;
+    color: #121212 !important;
+}
+body.dark-theme #flowerList li {
+    background-color: #2A2A2A !important;
+    border-color: #444 !important;
+    color: #F1F1F1 !important;
+}
+body.dark-theme #flowerList .remove-btn {
+    background-color: #7ED9A8 !important;
+    color: #121212 !important;
+}
+
+body.dark-theme .discount {
+    background-color: #7ED9A8 !important;
+    color: #121212 !important;
+}
+body.dark-theme .order-btn {
+    background-color: #E88AA0 !important;
+    color: #121212 !important;
+}
 
 
 
